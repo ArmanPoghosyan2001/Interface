@@ -4,25 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interface
+namespace _002_Interface
 {
-    class MyClass: Interface1
-    {
-        public void Method()
-        {
-            Console.WriteLine("Method");
-        }
-    }
     class Program
     {
         static void Main(string[] args)
         {
-            Interface1 my = new MyClass();
+            Interface1 instance1 = new DerivedClass();
+            Interface2 instance2 = new DerivedClass();
 
-            my.Method();
+            instance1.Method1();
 
+            instance2.Method2();
 
             Console.ReadKey();
+
         }
     }
 }
